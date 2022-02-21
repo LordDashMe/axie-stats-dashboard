@@ -5,7 +5,6 @@ find $(pwd)/* ! \( \
   -type d -name 'node_modules' -prune -o \
   -type d -name 'src' -prune -o \
   -type d -name 'tests' -prune -o \
-
   -type f -name '.gitignore' -prune -o \
   -type f -name 'deploy-clean.sh' -prune -o \
   -type f -name 'deploy.sh' -prune -o \
