@@ -13,6 +13,8 @@ import '../../styles/pages/home.scss';
 
 export default (props) => {
 
+    console.log(props);
+
     const [stats, setStats] = useState({
         total_slp_earned: 0,
         leaderboard_rank: 0,
