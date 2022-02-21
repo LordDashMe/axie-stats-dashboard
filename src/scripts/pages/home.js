@@ -5,7 +5,7 @@ import Card from '../components/card';
 import Stats from '../components/stats';
 import Footer from '../components/footer';
 
-import { convertCommaSeparatedNumber } from '../global';
+import { convertCommaSeparatedNumber, getUrlQueryParameter } from '../global';
 
 import '../../styles/third_party/font-awesome-6.0.0/font-awesome';
 
