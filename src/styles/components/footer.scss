@@ -1,0 +1,22 @@
+.at-footer {
+    background: rgb(0 0 0 / 45%);
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    padding: 18px 0;
+
+    .at-footer__copyright {
+        font-family: var(--theme-font-family);
+        text-align: center;
+        color: var(--theme-color);
+
+        p {
+            font-size: 0.9em;
+            margin: 0;
+
+            a {
+                font-weight: bold;
+            }
+        }
+    }
+}

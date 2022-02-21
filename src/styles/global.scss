@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+:after, :before {
+    box-sizing: border-box;
+}
+
+body {
+    --theme-color: #FFFF;
+    --theme-color-2: #00ddcc;
+    --theme-font-family: 'Quicksand', sans-serif;
+
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--theme-color);
+}
+
+.content-wrapper {
+    width: 1200px;
+    margin: auto;
+
+    @media (max-width: 1199px) {
+        width: 100%;
+    }
+}
+
+.content-padding {
+    padding: 0 34px 0 34px;
+
+    @media (max-width: 1199px) {
+        padding: 0 16px 0 16px;
+    }
+}
+
+a {
+    text-decoration: none;
+
+    &:active,
+    &:visited,
+    &:focus,
+    &:hover {
+        color: var(--theme-color-2);
+    }
+}

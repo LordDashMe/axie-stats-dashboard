@@ -1,0 +1,70 @@
+@import '../mixins';
+
+.fa-trophy::before {
+    content: "\f091"; 
+}
+
+.fa-flask::before {
+    content: "\f0c3"; 
+}
+
+.fa-shield::before {
+    content: "\f132"; 
+}
+
+.at-home {
+    margin: 40px 0 0 0;
+
+
+    .at-card {
+
+        h1 {
+            font-family: var(--theme-font-family);    
+        }
+
+        p {
+            font-family: var(--theme-font-family); 
+            font-size: 1.1em;    
+        }
+
+        .at-axie-watermark-1 {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;
+            position: absolute;
+            right: 20px;
+            top: -92px;
+            width: 284px;
+            height: 284px;
+
+            @include screen-tablet-and-mobile {
+                position: absolute;
+                right: 0px;
+                top: -54px;
+                width: 134px;
+                height: 138px;
+            }
+        }
+
+        .at-axie-watermark-2 {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;
+            position: absolute;
+            width: 186px;
+            height: 154px;
+            bottom: 26px;
+            right: 0;
+            transform: scaleX(-1);
+
+            @include screen-tablet-and-mobile {
+                position: absolute;
+                width: 98px;
+                height: 108px;
+                bottom: -54px;
+                left: 0px;
+                right: unset;
+            }
+        }
+    }
+}
