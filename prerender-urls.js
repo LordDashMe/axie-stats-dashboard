@@ -1,10 +1,10 @@
 module.exports = function () {
   return [
     {
-      url: "/axie-tracker-dashboard/",
+      url: "/",
       title: "Axie Tracker Dashboard",
       description: "A simplified dashboard for your axie account stats.",
-      canonical_url: "/axie-tracker-dashboard/"
+      canonical_url: "/"
     }
   ];
 };

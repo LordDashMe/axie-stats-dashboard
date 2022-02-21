@@ -12,6 +12,7 @@ find $(pwd)/* ! \( \
   -type f -name 'LICENSE' -prune -o \
   -type f -name 'package-lock.json' -prune -o \
   -type f -name 'package.json' -prune -o \
+  -type f -name 'preact.config.js' -prune -o \
   -type f -name 'prerender-urls.js' -prune -o \
   -type f -name 'README.md' -prune -o \
   -type f -name 'size-plugin.json' -prune \) -prune -exec rm -rf {} +
