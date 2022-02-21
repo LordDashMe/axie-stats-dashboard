@@ -12,7 +12,7 @@ export default () => {
 		<div class="at-container">
 			<Background />
 			<Router>
-				<Home path="/axie-tracker-dashboard/:roninAddress" />
+				<Home path="/" />
 			</Router>
 		</div>
 	);

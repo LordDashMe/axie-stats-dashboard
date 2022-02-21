@@ -11,9 +11,7 @@ import '../../styles/third_party/font-awesome-6.0.0/font-awesome';
 
 import '../../styles/pages/home.scss';
 
-export default (props) => {
-
-    console.log(props);
+export default () => {
 
     const [stats, setStats] = useState({
         total_slp_earned: 0,
@@ -23,7 +21,7 @@ export default (props) => {
 
     useEffect(() => {
 
-        let roninAddress = props.roninAddress.replace('ronin:', '0x');
+        let roninAddress = getUrlQueryParameter('id', window.location.href).replace('ronin:', '0x');
 
         const handleStatsChange = (newStats) => {
             

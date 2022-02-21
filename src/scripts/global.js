@@ -34,6 +34,26 @@ export function debounce(callback, waitingTime) {
 }
 
 /**
+ * The Get URL Query Parameter Helper.
+ * 
+ * To get the url query parameters.
+ * 
+ * @param {String} name  The key of the url query parameters.
+ * @param {String} url   The base url to be use.
+ * 
+ * @return {*} 
+ */
+export function getUrlQueryParameter(name, url) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+
+/**
  * The Is Element In Viewport Helper.
  * 
  * This will check if the given element is indeed visible in the viewport.
