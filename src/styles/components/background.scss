@@ -21,7 +21,7 @@
     }
 }
 
-.at-bg {
+.atd-bg {
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,4 +36,5 @@
     animation-name: changeBackgroundImage;
     animation-iteration-count: infinite;
     animation-direction: linear;
+    z-index: -1;
 }

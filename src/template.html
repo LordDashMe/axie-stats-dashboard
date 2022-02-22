@@ -21,6 +21,7 @@
     <% preact.headEnd %>
   </head>
   <body>
+    <script>window.GLOBAL_ENV = '<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.env %>';</script>
     <% preact.bodyEnd %>
   </body>
 </html>

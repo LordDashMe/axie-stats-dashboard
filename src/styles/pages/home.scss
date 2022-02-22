@@ -1,9 +1,9 @@
 @import '../mixins';
 
-.at-home {
+.atd-home {
     margin: 40px 0 0 0;
 
-    .at-card {
+    .atd-card {
 
         h1 {
             font-family: var(--theme-font-family);    
@@ -14,7 +14,7 @@
             font-size: 1.1em;    
         }
 
-        .at-axie-watermark-1 {
+        .atd-axie-watermark-1 {
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 50%;
@@ -33,7 +33,7 @@
             }
         }
 
-        .at-axie-watermark-2 {
+        .atd-axie-watermark-2 {
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 50%;
@@ -53,5 +53,11 @@
                 right: unset;
             }
         }
+    }
+
+    .atd-ads {
+        text-align: center;
+        margin: 20px 0;
+        padding: 10px 0;
     }
 }
