@@ -1,5 +1,3 @@
-import { useEffect } from 'preact/hooks';
-
 import '../../styles/third_party/adsense_template.scss';
 
 export default (props) => {

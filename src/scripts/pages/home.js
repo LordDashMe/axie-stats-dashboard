@@ -4,8 +4,7 @@ import { useState, useEffect } from 'preact/compat';
 import { convertCommaSeparatedNumber, getUrlQueryParameter } from '../global';
 
 import Gtag from '../third_party/gtag';
-import Adsense from '../third_party/adsense';
-import AdsenseTemplate from '../third_party/adsense_template';
+import AdsenseAuto from '../third_party/adsense_auto';
 
 import Background from '../components/background';
 import Card from '../components/card';
@@ -107,7 +106,7 @@ export default () => {
             </div>
             <Footer />
             <Gtag trackingId="UA-128894279-1" />
-            <Adsense />
+            <AdsenseAuto adClient="ca-pub-3427694918014398" />
         </div>
         </>
     );
