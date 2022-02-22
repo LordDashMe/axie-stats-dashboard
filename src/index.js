@@ -8,15 +8,15 @@ export default () => {
 
 	let homePath = '/axie-tracker-dashboard/';
 
-	if (typeof window !== 'undefined') {
+	// if (typeof window !== 'undefined') {
 
-		if (
-			typeof window.GLOBAL_ENV !== 'undefined' && 
-			window.GLOBAL_ENV === 'local'
-		) {
-			homePath = '/';
-		}
-	}
+	// 	if (
+	// 		typeof window.GLOBAL_ENV !== 'undefined' && 
+	// 		window.GLOBAL_ENV === 'local'
+	// 	) {
+	// 		homePath = '/';
+	// 	}
+	// }
 
 	return (
 		<div class="atd">
