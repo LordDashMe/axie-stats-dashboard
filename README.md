@@ -4,7 +4,7 @@ A simplified dashboard for your axie account stats.
 
 ## Requirements
 
-@TODO
+- Node v12 to latest
 
 ## Tech Stacks | Packages
 
@@ -15,7 +15,7 @@ A simplified dashboard for your axie account stats.
 Provided the URL, just add your ronin address and it will generate the dashboard page.
 
 ```
-https://lorddashme.github.io/axie-tracker/ronin:70b2821390ffb6d9e3a07a7c8c29ff16f1384021
+https://lorddashme.github.io/axie-tracker/?id=<ronin-address>
 ```
 
 ### Development

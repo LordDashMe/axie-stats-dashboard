@@ -1,17 +1,5 @@
 @import '../mixins';
 
-.fa-trophy::before {
-    content: "\f091"; 
-}
-
-.fa-flask::before {
-    content: "\f0c3"; 
-}
-
-.fa-shield::before {
-    content: "\f132"; 
-}
-
 .at-home {
     margin: 40px 0 0 0;
 
@@ -54,7 +42,7 @@
             width: 186px;
             height: 154px;
             bottom: 26px;
-            right: 0;
+            right: -14px;
             transform: scaleX(-1);
 
             @include screen-tablet-and-mobile {

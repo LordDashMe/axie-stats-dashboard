@@ -1,3 +1,7 @@
+.fa-heart:before {
+    content: "\f004";
+}
+
 .at-footer {
     background: rgb(0 0 0 / 45%);
     width: 100%;
@@ -14,8 +18,13 @@
             font-size: 0.9em;
             margin: 0;
 
+            .fa-heart {
+                color: var(--theme-color-2);
+            }
+
             a {
                 font-weight: bold;
+                color: var(--theme-color-2);
             }
         }
     }

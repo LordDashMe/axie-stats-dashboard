@@ -1,3 +1,5 @@
+export const GLOBAL_ENVIRONMENT = (typeof process !== 'undefined' ? process.env.ENVIRONMENT : 'local');
+
 /**
  * The code snippet for Debounce Strategy.
  *

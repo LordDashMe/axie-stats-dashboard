@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   site:
-    container_name: 'axie_tracker_dashboard_site'
+    container_name: 'axie_tracker_dashboard'
     tty: true
     stdin_open: true
     image: 'node:12-alpine'

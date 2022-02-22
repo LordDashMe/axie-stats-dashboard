@@ -1,13 +1,13 @@
 import { h } from 'preact';
 import { useState, useEffect } from 'preact/compat';
 
+import { convertCommaSeparatedNumber, getUrlQueryParameter } from '../global';
+
 import Card from '../components/card';
 import Stats from '../components/stats';
 import Footer from '../components/footer';
 
-import { convertCommaSeparatedNumber, getUrlQueryParameter } from '../global';
-
-import '../../styles/third_party/font-awesome-6.0.0/font-awesome';
+import '../../styles/third_party/font-awesome-6.0.0/font-awesome.scss';
 
 import '../../styles/pages/home.scss';
 

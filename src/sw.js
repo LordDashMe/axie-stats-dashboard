@@ -1,7 +1,6 @@
 /**
  * Technical Documentation Reference: https://preactjs.com/cli/service-worker/
  */
-
 import { getFiles, setupPrecaching, setupRouting } from 'preact-cli/sw';
 import { BackgroundSyncPlugin } from 'workbox-background-sync';
 import { registerRoute } from 'workbox-routing';

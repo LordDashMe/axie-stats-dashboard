@@ -1,5 +1,7 @@
 export default {
   webpack(config, env, helpers, options) {
-    config.output.publicPath = '/axie-tracker-dashboard/';
+    if (typeof process !== 'undefined' && process.env.ENVIRONMENT === 'production') {
+      config.output.publicPath = '/axie-tracker-dashboard/';
+    }
   }
 }
