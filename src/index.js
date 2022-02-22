@@ -14,7 +14,7 @@ export default () => {
 		<div class="at-container">
 			<Background />
 			<Router>
-				<Home path={GLOBAL_ENVIRONMENT === 'production' ? '/axie-tracker-dashboard/' : '/'} />
+				<Home path='/axie-tracker-dashboard/' />
 			</Router>
 		</div>
 	);
