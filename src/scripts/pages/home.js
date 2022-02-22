@@ -91,22 +91,24 @@ export default () => {
         <>
         <Background />
         <div class="atd-home">
-            <div class="content-wrapper content-padding">
+            <div class="atd-home-content content-wrapper content-padding">
                 <Card>
-                    <h1>Axie Tracker Dashboard</h1>
-                    <p>A simplified dashboard for your axie account stats.</p>
-                    <div class="atd-axie-watermark-1" style="background-image: url('https://storage.googleapis.com/assets.axieinfinity.com/axies/265/axie/axie-half.png');"></div>
-                    <div class="atd-axie-watermark-2" style="background-image: url('https://storage.googleapis.com/assets.axieinfinity.com/axies/1367/axie/axie-half.png');"></div>
+                    <h1 class="atd-home-title">Axie Tracker Dashboard</h1>
+                    <p class="atd-home-description">A simplified dashboard for your axie account stats.</p>
+                    <p class="atd-home-description">Other features coming soon!</p>
+
+                    <div class="atd-home-axie-watermark-1" style="background-image: url('https://storage.googleapis.com/assets.axieinfinity.com/axies/265/axie/axie-half.png');"></div>
+                    <div class="atd-home-axie-watermark-2" style="background-image: url('https://storage.googleapis.com/assets.axieinfinity.com/axies/1367/axie/axie-half.png');"></div>
                     <Stats 
                         total_slp_earned={convertCommaSeparatedNumber(stats.total_slp_earned)}
                         leaderboard_rank={convertCommaSeparatedNumber(stats.leaderboard_rank)} 
                         elo_rating={convertCommaSeparatedNumber(stats.elo_rating)} 
                     />
                 </Card>
-                <div class="atd-ads">
+                <div class="atd-home-ads">
                     <AdsenseTemplate 
                         adClient="ca-pub-3427694918014398"
-                        adSlot="4220072227"
+                        adSlot="2369194966"
                         adFormat="auto"
                         fullWidthResponsive="true"
                     />

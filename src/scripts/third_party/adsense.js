@@ -1,13 +1,19 @@
+import { useEffect } from "preact/hooks";
+
 export default () => {
 
-    if (typeof window !== 'undefined' && ! window.adsbygoogle) {
+    useEffect(() => {
 
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        if (typeof window !== 'undefined' && ! window.adsbygoogle) {
 
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
-        document.body.appendChild(script);
-    }
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+            document.body.appendChild(script);
+        }
+
+    });
 
 };

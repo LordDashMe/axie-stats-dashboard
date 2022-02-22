@@ -2,12 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <!-- META DETAILS -->
     <title><%= preact.title %></title>
     <meta name="description" content="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.description %>">
     <link rel="canonical" href="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.canonical_url %>" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
@@ -15,9 +17,15 @@
     <link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- PRELOAD -->
+    <link rel="preload" href="https://lorddashme.github.io/axie-tracker-dashboard/assets/img/bg/bg-1.min.png" as="image">
+    <link rel="preload" href="https://lorddashme.github.io/axie-tracker-dashboard/assets/img/bg/bg-2.min.png" as="image">
+    <link rel="preload" href="https://lorddashme.github.io/axie-tracker-dashboard/assets/img/bg/bg-3.min.png" as="image">
+    <link rel="preload" href="https://lorddashme.github.io/axie-tracker-dashboard/assets/img/bg/bg-4.min.png" as="image">
     <% preact.headEnd %>
   </head>
   <body>

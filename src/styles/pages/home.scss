@@ -2,62 +2,68 @@
 
 .atd-home {
     margin: 40px 0 0 0;
+    
 
-    .atd-card {
+    .atd-home-content {
+        height: 96vh;
+    
 
-        h1 {
-            font-family: var(--theme-font-family);    
-        }
+        .atd-card {
 
-        p {
-            font-family: var(--theme-font-family); 
-            font-size: 1.1em;    
-        }
+            .atd-home-title {
+                font-family: var(--theme-font-family);    
+            }
 
-        .atd-axie-watermark-1 {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 50%;
-            position: absolute;
-            right: 20px;
-            top: -92px;
-            width: 284px;
-            height: 284px;
+            .atd-home-description {
+                font-family: var(--theme-font-family); 
+                font-size: 1.1em;    
+            }
 
-            @include screen-tablet-and-mobile {
+            .atd-home-axie-watermark-1 {
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50%;
                 position: absolute;
-                right: 0px;
-                top: -54px;
-                width: 134px;
+                right: 20px;
+                top: -92px;
+                width: 284px;
+                height: 284px;
+
+                @include screen-tablet-and-mobile {
+                    position: absolute;
+                    right: 0px;
+                    top: -54px;
+                    width: 134px;
+                    height: 138px;
+                }
+            }
+
+            .atd-home-axie-watermark-2 {
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50%;
+                position: absolute;
+                width: 142px;
                 height: 138px;
+                bottom: 2px;
+                right: 14px;
+                transform: scaleX(-1);
+
+                @include screen-tablet-and-mobile {
+                    position: absolute;
+                    width: 98px;
+                    height: 108px;
+                    bottom: -54px;
+                    left: 0px;
+                    right: unset;
+                }
             }
         }
 
-        .atd-axie-watermark-2 {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 50%;
-            position: absolute;
-            width: 186px;
-            height: 154px;
-            bottom: 26px;
-            right: -14px;
-            transform: scaleX(-1);
-
-            @include screen-tablet-and-mobile {
-                position: absolute;
-                width: 98px;
-                height: 108px;
-                bottom: -54px;
-                left: 0px;
-                right: unset;
-            }
+        .atd-home-ads {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px 0;
         }
-    }
-
-    .atd-ads {
-        text-align: center;
-        margin: 20px 0;
-        padding: 10px 0;
     }
 }

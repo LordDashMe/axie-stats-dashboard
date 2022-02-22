@@ -1,5 +1,3 @@
-import { h } from 'preact';
-
 import '../../styles/components/stats.scss';
 
 export default (props) => {

@@ -6,7 +6,6 @@
     background: rgb(0 0 0 / 45%);
     width: 100%;
     bottom: 0;
-    position: absolute;
     padding: 18px 0;
 
     .atd-footer__copyright {
@@ -15,7 +14,7 @@
         color: var(--theme-color);
 
         p {
-            font-size: 0.9em;
+            font-size: 0.8em;
             margin: 0;
 
             .fa-heart {

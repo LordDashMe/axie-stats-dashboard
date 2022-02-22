@@ -1,4 +1,10 @@
 /**
+ * List of Global Variables that can be export.
+ */
+export const GLOBAL_VERSION = '0.0.2';
+export const GLOBAL_YEAR = '2022';
+
+/**
  * The code snippet for Debounce Strategy.
  *
  * @param {Function} callback     The callback function that will be debouce.

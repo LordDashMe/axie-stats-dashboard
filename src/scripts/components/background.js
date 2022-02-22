@@ -1,5 +1,3 @@
-import { h } from 'preact';
-
 import '../../styles/components/background.scss';
 
 export default () => {

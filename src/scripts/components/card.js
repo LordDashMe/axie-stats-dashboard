@@ -1,5 +1,3 @@
-import { h } from 'preact';
-
 import '../../styles/components/card.scss';
 
 export default (props) => {

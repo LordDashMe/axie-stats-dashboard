@@ -19,7 +19,7 @@ export default () => {
 	}
 
 	return (
-		<div class="at-container">
+		<div class="atd">
 			<Router>
 				<Home path={homePath} />
 			</Router>

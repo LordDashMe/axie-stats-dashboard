@@ -1,23 +1,23 @@
 @keyframes changeBackgroundImage {
     
     0% {
-        background-image: url('../../assets/img/bg/bg-1.min.png');
+        background-image: url('https://lorddashme.github.io/axie-tracker-dashboard/assets/img/bg/bg-1.min.png');
     }
 
     25% {
-        background-image: url('../../assets/img/bg/bg-2.min.png');  
+        background-image: url('https://lorddashme.github.io/axie-tracker-dashboard/assets/img/bg/bg-2.min.png');  
     }
 
     50% {
-        background-image: url('../../assets/img/bg/bg-3.min.png');
+        background-image: url('https://lorddashme.github.io/axie-tracker-dashboard/assets/img/bg/bg-3.min.png');
     }
 
     75% {
-        background-image: url('../../assets/img/bg/bg-4.min.png');
+        background-image: url('https://lorddashme.github.io/axie-tracker-dashboard/assets/img/bg/bg-4.min.png');
     }
 
     100% {
-        background-image: url('../../assets/img/bg/bg-1.min.png');
+        background-image: url('https://lorddashme.github.io/axie-tracker-dashboard/assets/img/bg/bg-1.min.png');
     }
 }
 
@@ -32,9 +32,10 @@
     border: 0;
     right: 0;
     left: 0;
-    animation-duration: 40s;
+    animation-duration: 30s;
     animation-name: changeBackgroundImage;
     animation-iteration-count: infinite;
     animation-direction: linear;
     z-index: -1;
+    background-image: #000;
 }
