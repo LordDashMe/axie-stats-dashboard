@@ -21,58 +21,64 @@ export default () => {
 
     useEffect(() => {
 
-        let roninAddress = getUrlQueryParameter('id', window.location.href).replace('ronin:', '0x');
+        const queryParamId = getUrlQueryParameter('id', window.location.href);
 
-        const handleStatsChange = (newStats) => {
+        if (queryParamId) {
             
-            setStats(
-                (prevStats) => {
+            const roninAddress = queryParamId.replace('ronin:', '0x');
+        
 
-                    return {...prevStats, ...newStats}
+            const handleStatsChange = (newStats) => {
+                
+                setStats(
+                    (prevStats) => {
+                        return {...prevStats, ...newStats}
+                    }
+                );
+
+            };
+
+            fetch(`https://game-api.axie.technology/slp/${roninAddress}`).then((response) => {
+
+                if (response.ok) {
+                    return response.json();
                 }
-            );
-        };
 
-        fetch(`https://game-api.axie.technology/slp/${roninAddress}`).then((response) => {
+                return Promise.reject(false);
 
-            if (response.ok) {
-                return response.json();
-            }
+            }).then((json) => {
 
-            return Promise.reject(false);
+                handleStatsChange({
+                    total_slp_earned: json[0].total || 0
+                });
 
-        }).then((json) => {
+            }).catch(() => {
 
-            handleStatsChange({
-                total_slp_earned: json[0].total || 0
+                console.error('Axie API for SLP is not working.');
+
             });
 
-        }).catch(() => {
+            fetch(`https://game-api.axie.technology/mmr/${roninAddress}`).then((response) => {
 
-            console.error('Axie API for SLP is not working.');
+                if (response.ok) {
+                    return response.json();
+                }
 
-        });
+                return Promise.reject(false);
 
-        fetch(`https://game-api.axie.technology/mmr/${roninAddress}`).then((response) => {
+            }).then((json) => {
 
-            if (response.ok) {
-                return response.json();
-            }
+                handleStatsChange({
+                    leaderboard_rank: json[0].items[1].rank || 0,
+                    elo_rating: json[0].items[1].elo || 0
+                });
 
-            return Promise.reject(false);
+            }).catch(() => {
 
-        }).then((json) => {
+                console.error('Axie API for MMR is not working.');
 
-            handleStatsChange({
-                leaderboard_rank: json[0].items[1].rank || 0,
-                elo_rating: json[0].items[1].elo || 0
             });
-
-        }).catch(() => {
-
-            console.error('Axie API for MMR is not working.');
-
-        });
+        }
 
     }, []);
 
