@@ -1,6 +1,6 @@
 import Router from 'preact-router';
 
-import { GLOBAL_ENVIRONMENT } from './scripts/global';
+import { GLOBAL_EXPORT_ENVIRONMENT } from './scripts/global';
 
 import Background from './scripts/components/background';
 
@@ -14,7 +14,7 @@ export default () => {
 		<div class="at-container">
 			<Background />
 			<Router>
-				<Home path='/axie-tracker-dashboard/' />
+				<Home path={GLOBAL_EXPORT_ENVIRONMENT === 'local' ? '/' : '/axie-tracker-dashboard/'} />
 			</Router>
 		</div>
 	);
