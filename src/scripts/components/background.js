@@ -1,9 +1,9 @@
 import '../../styles/components/background.scss';
 
-export default () => {
+export default (props) => {
 
     return (
-        <div class="atd-bg"></div>
+        <div class="atd-bg">{props.children}</div>
     );
     
 };
