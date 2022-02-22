@@ -5,7 +5,7 @@ import Background from '../src/scripts/components/background';
 
 describe('Test Cases for Background Component', () => {
 	
-    test('it should render background main class.', () => {
+    test('it should render background component.', () => {
 
 		const context = shallow(<Background />);
 

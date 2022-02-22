@@ -1,9 +1,3 @@
-export const GLOBAL_EXPORT_ENVIRONMENT = (
-    typeof process !== 'undefined' && typeof process.env !== 'undefined' ? process.env.ENVIRONMENT : (
-        typeof window.GLOBAL_INLINE_ENVIRONMENT !== 'undefined' ? window.GLOBAL_INLINE_ENVIRONMENT : 'production'
-    )
-);
-
 /**
  * The code snippet for Debounce Strategy.
  *

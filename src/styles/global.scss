@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 
-:after, :before {
+:after, 
+:before {
     box-sizing: border-box;
 }
 
@@ -36,6 +37,7 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--theme-color-2);
 
     &:active,
     &:visited,
