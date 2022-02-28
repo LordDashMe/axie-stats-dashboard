@@ -1,6 +1,6 @@
 # Axie Tracker Dashboard
 
-A simplified dashboard for your axie account stats.
+A simplified dashboard for your Axie Infinity stats.
 
 ## Requirements
 

@@ -4,7 +4,7 @@ module.exports = function () {
       env: (typeof process !== 'undefined' && typeof process.env !== 'undefined' ? process.env.ENVIRONMENT : 'production'),
       url: '/',
       title: 'Axie Tracker Dashboard',
-      description: 'A simplified dashboard for your axie account stats.',
+      description: 'A simplified dashboard for your Axie Infinity stats.',
       canonical_url: (typeof process !== 'undefined' && typeof process.env !== 'undefined' && process.env.ENVIRONMENT === 'production' ? '/axie-tracker-dashboard/' : '/')
     }
   ];

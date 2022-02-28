@@ -1,7 +1,7 @@
 /**
  * List of Global Variables that can be export.
  */
-export const GLOBAL_VERSION = '0.1.1';
+export const GLOBAL_VERSION = '0.1.2';
 export const GLOBAL_YEAR = '2022';
 
 /**
