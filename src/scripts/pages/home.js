@@ -106,7 +106,7 @@ export default () => {
                         </Stats>
                         <h2 class="atd-home-sub-title">Battle Stats</h2>
                         <Stats>
-                            <StatsMetric label="Name" value={convertCommaSeparatedNumber(stats.name)}>
+                            <StatsMetric label="Name" value={stats.name}>
                                 <i class="fa-solid fa-address-card"></i> 
                             </StatsMetric>
                             <StatsMetric label="Elo Rating (MMR)" value={convertCommaSeparatedNumber(stats.elo_rating)}>
