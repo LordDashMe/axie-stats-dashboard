@@ -8,7 +8,7 @@ import AdsenseAuto from '../third_party/adsense_auto';
 
 import Background from '../components/background';
 import Card from '../components/card';
-import Stats from '../components/stats';
+import Stats, { StatsMetric } from '../components/stats';
 import Footer from '../components/footer';
 
 import '../../styles/third_party/font-awesome-6.0.0/font_awesome.scss';
@@ -19,6 +19,7 @@ export default () => {
 
     const [stats, setStats] = useState({
         total_slp_earned: 0,
+        name: 'N/A',
         leaderboard_rank: 0,
         elo_rating: 0
     });
@@ -73,6 +74,7 @@ export default () => {
             }).then((json) => {
 
                 handleStatsChange({
+                    name: json[0].items[1].name || 'N/A',
                     leaderboard_rank: json[0].items[1].rank || 0,
                     elo_rating: json[0].items[1].elo || 0
                 });
@@ -93,15 +95,27 @@ export default () => {
                 <div class="atd-home-content content-wrapper content-padding">
                     <Card>
                         <h1 class="atd-home-title">Axie Tracker Dashboard</h1>
-                        <p class="atd-home-description">A simplified dashboard for your axie account stats.</p>
-                        <p class="atd-home-description">Other features coming soon!</p>
+                        <p class="atd-home-description">A simplified dashboard for your axie account stats. The below details are the latest data.</p>
                         <div class="atd-home-axie-watermark-1" style="background-image: url('https://storage.googleapis.com/assets.axieinfinity.com/axies/265/axie/axie-half.png');"></div>
                         <div class="atd-home-axie-watermark-2" style="background-image: url('https://storage.googleapis.com/assets.axieinfinity.com/axies/1367/axie/axie-half.png');"></div>
-                        <Stats 
-                            total_slp_earned={convertCommaSeparatedNumber(stats.total_slp_earned)}
-                            leaderboard_rank={convertCommaSeparatedNumber(stats.leaderboard_rank)} 
-                            elo_rating={convertCommaSeparatedNumber(stats.elo_rating)} 
-                        />
+                        <h2 class="atd-home-sub-title">Account Stats</h2>
+                        <Stats>
+                            <StatsMetric label="SLP Earned" value={convertCommaSeparatedNumber(stats.total_slp_earned)}>
+                                <i class="fa-solid fa-flask"></i> 
+                            </StatsMetric>
+                        </Stats>
+                        <h2 class="atd-home-sub-title">Battle Stats</h2>
+                        <Stats>
+                            <StatsMetric label="Name" value={convertCommaSeparatedNumber(stats.name)}>
+                                <i class="fa-solid fa-address-card"></i> 
+                            </StatsMetric>
+                            <StatsMetric label="Elo Rating (MMR)" value={convertCommaSeparatedNumber(stats.elo_rating)}>
+                                <i class="fa-solid fa-shield"></i> 
+                            </StatsMetric>
+                            <StatsMetric label="Leaderboard Rank" value={convertCommaSeparatedNumber(stats.leaderboard_rank)}>
+                                <i class="fa-solid fa-trophy"></i> 
+                            </StatsMetric>
+                        </Stats>
                     </Card>
                 </div>
                 <Footer />

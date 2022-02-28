@@ -1,5 +1,21 @@
 @import '../mixins';
 
+.fa-flask::before {
+    content: "\f0c3"; 
+}
+
+.fa-shield::before {
+    content: "\f132"; 
+}
+
+.fa-trophy::before {
+    content: "\f091"; 
+}
+
+.fa-address-card:before {
+    content: "\f2bb";
+}
+
 .atd-home {
     margin: 40px 0 0 0;
     
@@ -57,6 +73,10 @@
                     left: 0px;
                     right: unset;
                 }
+            }
+
+            .atd-home-sub-title {
+                font-family: var(--theme-font-family);    
             }
         }
     }

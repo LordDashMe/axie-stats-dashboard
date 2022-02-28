@@ -1,19 +1,8 @@
-.fa-trophy::before {
-    content: "\f091"; 
-}
-
-.fa-flask::before {
-    content: "\f0c3"; 
-}
-
-.fa-shield::before {
-    content: "\f132"; 
-}
-
 .atd-stats {
 
     .atd-stats-metric {
         margin: 0 0 14px 0;
+        padding: 0 0 0 8px;
 
         i {
             font-size: 1.8em;
