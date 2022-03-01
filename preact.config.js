@@ -5,7 +5,7 @@ export default {
       typeof process.env !== 'undefined' && 
       process.env.ENVIRONMENT === 'production'
     ) {
-      config.output.publicPath = '/axie-tracker-dashboard/';
+      config.output.publicPath = '/axie-stats-dashboard/';
     }
   }
 }

@@ -94,7 +94,7 @@ export default () => {
             <div class="atd-home">
                 <div class="atd-home-content content-wrapper content-padding">
                     <Card>
-                        <h1 class="atd-home-title">Axie Tracker Dashboard</h1>
+                        <h1 class="atd-home-title">Axie Stats Dashboard</h1>
                         <p class="atd-home-description">A simplified dashboard for your Axie Infinity stats.</p>
                         <div class="atd-home-axie-watermark-1" style="background-image: url('https://storage.googleapis.com/assets.axieinfinity.com/axies/265/axie/axie-half.png');"></div>
                         <div class="atd-home-axie-watermark-2" style="background-image: url('https://storage.googleapis.com/assets.axieinfinity.com/axies/1367/axie/axie-half.png');"></div>

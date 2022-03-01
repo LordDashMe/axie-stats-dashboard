@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "axie-tracker-dashboard",
+  "name": "axie-stats-dashboard",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {

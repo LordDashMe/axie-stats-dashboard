@@ -6,7 +6,7 @@ import './styles/global.scss';
 
 export default () => {
 
-	let homePath = '/axie-tracker-dashboard/';
+	let homePath = '/axie-stats-dashboard/';
 
 	if (typeof window !== 'undefined') {
 

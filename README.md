@@ -1,4 +1,4 @@
-# Axie Tracker Dashboard
+# Axie Stats Dashboard
 
 A simplified dashboard for your Axie Infinity stats.
 
@@ -15,7 +15,7 @@ A simplified dashboard for your Axie Infinity stats.
 Provided the URL, just add your ronin address and it will generate the dashboard page.
 
 ```
-https://lorddashme.github.io/axie-tracker/?id=<ronin-address>
+https://lorddashme.github.io/axie-stats-dashboard/?id=<ronin-address>
 ```
 
 ### Development
