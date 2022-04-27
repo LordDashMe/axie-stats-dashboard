@@ -21,13 +21,21 @@
     
 
     .atd-home-content {
-        height: 96vh;
+        height: 120vh;
     
+        @include screen-mobile-common {
+            height: 130vh;
+        }
+
+        @include screen-mobile-small-and-xtra-small {
+            height: 140vh;
+        }
 
         .atd-card {
 
             .atd-home-title {
                 font-family: var(--theme-font-family);    
+                line-height: 1.2;
             }
 
             .atd-home-description {
@@ -77,8 +85,16 @@
 
             .atd-home-ronin-address {
                 font-family: var(--theme-font-family);
-                font-size: 1.1em;
+                font-size: 1em;
                 font-weight: 700;
+
+                @include screen-mobile-common {
+                    font-size: 0.86em;
+                }
+        
+                @include screen-mobile-small-and-xtra-small {
+                    font-size: 0.76em;
+                }
 
                 img {
                     vertical-align: middle;

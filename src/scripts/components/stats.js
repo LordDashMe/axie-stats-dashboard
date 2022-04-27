@@ -14,9 +14,7 @@ export const StatsMetric = (props) => {
 export default (props) => {
 
     return (
-        <div class="atd-stats">
-            {props.children}
-        </div>
+        <div class="atd-stats">{props.children}</div>
     );
     
 };
