@@ -75,8 +75,25 @@
                 }
             }
 
+            .atd-home-ronin-address {
+                font-family: var(--theme-font-family);
+                font-size: 1.1em;
+                font-weight: 700;
+
+                img {
+                    vertical-align: middle;
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                }
+            }
+
             .atd-home-sub-title {
                 font-family: var(--theme-font-family);    
+            }
+
+            .atd-home-sub-description {
+                font-family: var(--theme-font-family); 
             }
 
             .atd-home-remarks {

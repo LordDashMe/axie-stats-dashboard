@@ -17,8 +17,11 @@ import '../../styles/pages/home.scss';
 
 export default () => {
 
+    let roninAddress = '';
+
     const [stats, setStats] = useState({
-        total_slp_earned: 0,
+        roninAddress: '',
+        current_slp: 0,
         name: 'N/A',
         leaderboard_rank: 0,
         elo_rating: 0
@@ -30,8 +33,7 @@ export default () => {
 
         if (queryParamId) {
             
-            const roninAddress = queryParamId.replace('ronin:', '0x');
-        
+            roninAddress = queryParamId.replace('ronin:', '0x');
 
             const handleStatsChange = (newStats) => {
                 
@@ -42,6 +44,10 @@ export default () => {
                 );
 
             };
+
+            handleStatsChange({
+                roninAddress: roninAddress
+            });
 
             fetch(`https://game-api.axie.technology/slp/${roninAddress}`).then((response) => {
 
@@ -54,7 +60,7 @@ export default () => {
             }).then((json) => {
 
                 handleStatsChange({
-                    total_slp_earned: json[0].total || 0
+                    current_slp: json[0].total || 0
                 });
 
             }).catch(() => {
@@ -74,9 +80,8 @@ export default () => {
             }).then((json) => {
 
                 handleStatsChange({
-                    name: json[0].items[1].name || 'N/A',
-                    leaderboard_rank: json[0].items[1].rank || 0,
-                    elo_rating: json[0].items[1].elo || 0
+                    leaderboard_rank: json[0].items[0].rank || 0,
+                    elo_rating: json[0].items[0].elo || 0
                 });
 
             }).catch(() => {
@@ -98,17 +103,15 @@ export default () => {
                         <p class="atd-home-description">A simplified dashboard for your Axie Infinity stats.</p>
                         <div class="atd-home-axie-watermark-1" style="background-image: url('https://storage.googleapis.com/assets.axieinfinity.com/axies/265/axie/axie-half.png');"></div>
                         <div class="atd-home-axie-watermark-2" style="background-image: url('https://storage.googleapis.com/assets.axieinfinity.com/axies/1367/axie/axie-half.png');"></div>
+                        <p class="atd-home-ronin-address">Your <img alt="ronin" width="30px" height="30px" src="https://cdn.substack.com/image/fetch/w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fa82e3e99-37f2-4262-95f3-c36d83433874_512x512.png"></img> Ronin Address is <a href={'https://explorer.roninchain.com/address/' + stats.roninAddress} target="_blank">{stats.roninAddress}</a></p>
                         <h2 class="atd-home-sub-title">Account Stats</h2>
                         <Stats>
-                            <StatsMetric label="SLP Earned" value={convertCommaSeparatedNumber(stats.total_slp_earned)}>
+                            <StatsMetric label="Current SLP" value={convertCommaSeparatedNumber(stats.current_slp)}>
                                 <i class="fa-solid fa-flask"></i> 
                             </StatsMetric>
                         </Stats>
-                        <h2 class="atd-home-sub-title">Battle Stats</h2>
+                        <h2 class="atd-home-sub-title">Battle Stats - V2</h2>
                         <Stats>
-                            <StatsMetric label="Name" value={stats.name}>
-                                <i class="fa-solid fa-address-card"></i> 
-                            </StatsMetric>
                             <StatsMetric label="Elo Rating (MMR)" value={convertCommaSeparatedNumber(stats.elo_rating)}>
                                 <i class="fa-solid fa-shield"></i> 
                             </StatsMetric>
@@ -116,6 +119,8 @@ export default () => {
                                 <i class="fa-solid fa-trophy"></i> 
                             </StatsMetric>
                         </Stats>
+                        <h2 class="atd-home-sub-title">Battle Stats - Origin</h2>
+                        <p class="atd-home-sub-description">Coming Soon...</p>
                         <p class="atd-home-remarks"><i>*Above details are live data.</i></p>
                     </Card>
                 </div>
